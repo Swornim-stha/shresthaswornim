@@ -28,11 +28,13 @@
   }
   
   .card .img {
-    width: 4.8em;
-    height: 4.8em;
+    width: 10px;
+    height: 10px;
     background: white;
     border-radius: 15px;
     margin: auto;
+   
+    
   }
   
   .card .share {
