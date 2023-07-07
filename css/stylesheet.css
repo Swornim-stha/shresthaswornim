@@ -1,178 +1,57 @@
-.card {
-    width: 17em;
-    height: 22.5em;
-    background: #171717;
-    transition: 1s ease-in-out;
-    clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .card span {
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    display: block;
-    font-size: 1em;
-  }
-  
-  .card .info {
-    font-weight: 400;
-    color: white;
-    display: block;
-    text-align: center;
-    font-size: 0.72em;
-    margin: 1em;
-  }
-  
-  .card .img {
-    width: 4.8em;
-    height: 4.8em;
-    background: white;
-    border-radius: 15px;
-    margin: auto;
-    display: flex;
-    
-  }
-  
-  .card .share {
-    margin-top: 1em;
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-  }
-  
-  .card a {
-    color: white;
-    transition: .4s ease-in-out;
-  }
-  
-  .card a:hover {
-    color: red;
-  }
-  
-  .card button {
-    padding: 0.8em 1.7em;
-    display: block;
-    margin: auto;
-    border-radius: 25px;
-    border: none;
-    font-weight: bold;
-    background: #ffffff;
-    color: rgb(0, 0, 0);
-    transition: .4s ease-in-out;
-  }
-  
-  .card button:hover {
-    background: red;
-    color: white;
-    cursor: pointer;
-  }
-  .loader {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 10;
-    width: 160px;
-    height: 100px;
-    margin-left: -80px;
-    margin-top: -50px;
-    border-radius: 5px;
-    background: #1e3f57;
-    animation: dot1_ 3s cubic-bezier(0.55,0.3,0.24,0.99) infinite;
-  }
-  
-  .loader:nth-child(2) {
-    z-index: 11;
-    width: 150px;
-    height: 90px;
-    margin-top: -45px;
-    margin-left: -75px;
-    border-radius: 3px;
-    background: #3c517d;
-    animation-name: dot2_;
-  }
-  
-  .loader:nth-child(3) {
-    z-index: 12;
-    width: 40px;
-    height: 20px;
-    margin-top: 50px;
-    margin-left: -20px;
-    border-radius: 0 0 5px 5px;
-    background: #6bb2cd;
-    animation-name: dot3_;
-  }
-  
-  @keyframes dot1_ {
-    3%,97% {
-      width: 160px;
-      height: 100px;
-      margin-top: -50px;
-      margin-left: -80px;
-    }
-  
-    30%,36% {
-      width: 80px;
-      height: 120px;
-      margin-top: -60px;
-      margin-left: -40px;
-    }
-  
-    63%,69% {
-      width: 40px;
-      height: 80px;
-      margin-top: -40px;
-      margin-left: -20px;
-    }
-  }
-  
-  @keyframes dot2_ {
-    3%,97% {
-      height: 90px;
-      width: 150px;
-      margin-left: -75px;
-      margin-top: -45px;
-    }
-  
-    30%,36% {
-      width: 70px;
-      height: 96px;
-      margin-left: -35px;
-      margin-top: -48px;
-    }
-  
-    63%,69% {
-      width: 32px;
-      height: 60px;
-      margin-left: -16px;
-      margin-top: -30px;
-    }
-  }
-  
-  @keyframes dot3_ {
-    3%,97% {
-      height: 20px;
-      width: 40px;
-      margin-left: -20px;
-      margin-top: 50px;
-    }
-  
-    30%,36% {
-      width: 8px;
-      height: 8px;
-      margin-left: -5px;
-      margin-top: 49px;
-      border-radius: 8px;
-    }
-  
-    63%,69% {
-      width: 16px;
-      height: 4px;
-      margin-left: -8px;
-      margin-top: -37px;
-      border-radius: 10px;
-    }
-  }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  padding: 20px;
+  color: #fff;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.chatbox {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 20px;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.message {
+  margin-bottom: 10px;
+}
+
+.message .avatar {
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.message .text {
+  margin-left: 10px;
+}
+
+.message#userMessage input[type="text"] {
+  width: 70%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.message#userMessage button {
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
