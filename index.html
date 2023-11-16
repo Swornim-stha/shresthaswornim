@@ -7,25 +7,21 @@
 </head>
 
 <body>
-  <header>
-    <h1>AI Interactive Website</h1>
-  </header>
-
-  <div class="container">
-    <div class="chatbox">
-      <div class="message" id="botMessage">
-        <span class="avatar">AI</span>
-        <span class="text">Hello! How can I assist you?</span>
-      </div>
-      <div class="message" id="userMessage">
-        <span class="avatar">You</span>
-        <input type="text" id="userInput" placeholder="Type your message">
-        <button onclick="sendMessage()">Send</button>
-      </div>
+  <div class="form-box">
+    <form class="form">
+        <span class="title">Sign up</span>
+        <span class="subtitle">Create a free account with your email.</span>
+        <div class="form-container">
+          <input type="text" class="input" placeholder="Full Name">
+          <input type="email" class="input" placeholder="Email">
+          <input type="password" class="input" placeholder="Password">
+        </div>
+        <button>Sign up</button>
+    </form>
+    <div class="form-section">
+      <p>Have an account? <a href="https://www.swornimstha.com.np/">Log in</a> </p>
     </div>
-  </div>
-
-  <script src="/script.js"></script>
+    </div>
 </body>
 
 </html>
